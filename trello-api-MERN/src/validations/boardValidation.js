@@ -9,8 +9,7 @@ const createNew = async (req, res, next) => {
 
   try {
     await correctCondition.validateAsync(req.body, { abortEarly: false })
-    // next()
-    res.status(StatusCodes.OK).json({ message: ' Refresh Token API success.' })
+    next()
   } catch (error) {
     res.status(StatusCodes.UNPROCESSABLE_ENTITY).json({ error: new Error(error).message })
   }

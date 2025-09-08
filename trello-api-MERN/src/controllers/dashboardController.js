@@ -11,6 +11,21 @@ const access = async (req, res) => {
   }
 }
 
+const createNew = async (req, res) => {
+  try {
+    console.log('req.body', req.body)
+    console.log('req.query', req.query)
+    console.log('req.params', req.params)
+    console.log('req.files', req.files)
+    console.log('req.jwtDecoded', req.jwtDecoded)
+    console.log('req.cookies', req.cookies)
+
+    res.status(StatusCodes.OK).json({ message: 'controllers' })
+  } catch (error) {
+    res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ errors: error.message })
+  }
+}
+
 export const dashboardController = {
-  access
+  access, createNew
 }

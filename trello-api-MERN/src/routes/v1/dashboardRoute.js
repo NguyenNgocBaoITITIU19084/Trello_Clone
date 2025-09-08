@@ -9,5 +9,5 @@ Router.route('/access')
   .get(dashboardController.access)
 
 Router.route('/')
-  .post(boardValidation.createNew)
+  .post(boardValidation.createNew, dashboardController.createNew)
 export const dashboardRoute = Router
