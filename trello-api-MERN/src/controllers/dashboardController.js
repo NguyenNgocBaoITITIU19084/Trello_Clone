@@ -1,5 +1,6 @@
 // Author: TrungQuanDev: https://youtube.com/@trungquandev
 import { StatusCodes } from 'http-status-codes'
+import { boardService } from '~/services/boardService'
 
 const access = async (req, res) => {
   try {
@@ -20,7 +21,9 @@ const createNew = async (req, res) => {
     console.log('req.jwtDecoded', req.jwtDecoded)
     console.log('req.cookies', req.cookies)
 
-    res.status(StatusCodes.OK).json({ message: 'controllers' })
+    const createdBoard = await boardService.createNew(req.body)
+
+    res.status(StatusCodes.OK).json(createdBoard)
   } catch (error) {
     res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ errors: error.message })
   }
