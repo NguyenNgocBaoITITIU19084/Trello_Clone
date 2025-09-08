@@ -10,6 +10,9 @@ import { corsOptions } from '~/config/corsOptions'
 import { APIs_V1 } from '~/routes/v1/'
 
 import { CONNECT_DB, GET_DB } from './config/mongodb'
+import { errorHandlingMiddleware } from './middlewares/handleErrorMiddleware'
+import ApiError from './utils/ApiError'
+import { StatusCodes } from 'http-status-codes'
 
 const START_SERVER = () => {
   // Init Express App
@@ -33,6 +36,13 @@ const START_SERVER = () => {
   // Use Route APIs V1
   app.use('/v1', APIs_V1)
 
+  // send back a 404 error for any unknown api request
+  app.use((req, res, next) => {
+    next(new ApiError(StatusCodes.NOT_FOUND, 'Not found'))
+  })
+
+  // handle error middleware
+  app.use(errorHandlingMiddleware)
 
   app.listen(env.LOCAL_DEV_APP_PORT, env.LOCAL_DEV_APP_HOST, () => {
     console.log(`Local DEV: Hello ${env.AUTHOR}, Back-end Server is running successfully at Host: ${env.LOCAL_DEV_APP_HOST} and Port: ${env.LOCAL_DEV_APP_PORT}`)
