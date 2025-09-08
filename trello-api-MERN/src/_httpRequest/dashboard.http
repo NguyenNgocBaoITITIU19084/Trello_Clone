@@ -1,0 +1,3 @@
+@url=http://localhost:8017/v1/dashboards
+
+POST {{url}}
