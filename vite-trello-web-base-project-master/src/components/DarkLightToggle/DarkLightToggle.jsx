@@ -8,13 +8,6 @@ import LightModeIcon from '@mui/icons-material/LightMode'
 import NightsStayIcon from '@mui/icons-material/NightsStay'
 import Brightness7Icon from '@mui/icons-material/Brightness7'
 import { useColorScheme } from '@mui/material'
-import styled from '@emotion/styled'
-
-const StyledSelectBox = styled(Box)({
-  display: 'flex',
-  alignItems: 'center',
-  gap: '10px'
-})
 
 function DarkLightToggle() {
   const { mode, setMode } = useColorScheme()
@@ -35,22 +28,22 @@ function DarkLightToggle() {
           onChange={handleChange}
         >
           <MenuItem value={'light'}>
-            <StyledSelectBox>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
               <LightModeIcon fontSize='small'/>
               <Typography variant="span">Light</Typography>
-            </StyledSelectBox>
+            </Box>
           </MenuItem>
           <MenuItem value={'dark'}>
-            <StyledSelectBox>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
               <NightsStayIcon fontSize='small'/>
               <Typography variant='span'>Dark</Typography>
-            </StyledSelectBox>
+            </Box>
           </MenuItem>
           <MenuItem value={'system'}>
-            <StyledSelectBox>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
               <Brightness7Icon fontSize='small'/>
               <Typography>System</Typography>
-            </StyledSelectBox>
+            </Box>
           </MenuItem>
         </Select>
       </FormControl>
