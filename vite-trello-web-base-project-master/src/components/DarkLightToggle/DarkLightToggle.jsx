@@ -18,7 +18,7 @@ function DarkLightToggle() {
 
   return (
     <Box sx={{ maxWidth: 120 }}>
-      <FormControl fullWidth>
+      <FormControl fullWidth size='small'>
         <InputLabel id="label-select-dark-light-mode">Mode</InputLabel>
         <Select
           labelId="label-select-dark-light-mode"
