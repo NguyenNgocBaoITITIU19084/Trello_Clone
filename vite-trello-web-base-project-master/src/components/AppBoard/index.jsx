@@ -39,12 +39,12 @@ function AppBoard() {
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
           <Tooltip title="Notifications">
             <Badge badgeContent={4} color="error">
-              <NotificationsIcon />
+              <NotificationsIcon sx={{ color: 'primary.main' }} />
             </Badge>
           </Tooltip>
 
           <Tooltip title="Help">
-            <HelpOutlineIcon />
+            <HelpOutlineIcon sx={{ color: 'primary.main' }} />
           </Tooltip>
 
           <PersonalProfile />

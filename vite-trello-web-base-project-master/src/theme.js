@@ -20,6 +20,44 @@ const theme = extendTheme({
         // }
       }
     }
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: ({ theme }) => {
+          return {
+            textTransform: 'none',
+            '&:hover': {
+              borderColor: `${theme.palette.primary.light}`
+            }
+          }
+        }
+      }
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: ({ theme }) => {
+          return {
+            color: `${theme.palette.primary.main}`,
+            '& .MuiOutlinedInput-notchedOutline': {
+              borderColor: `${theme.palette.primary.main}`
+            },
+            '&:hover .MuiOutlinedInput-notchedOutline': {
+              borderColor: `${theme.palette.primary.light}`
+            }
+          }
+        }
+      }
+    },
+    MuiInputLabel: {
+      styleOverrides: {
+        root: ({ theme }) => {
+          return {
+            color: `${theme.palette.primary.main}`
+          }
+        }
+      }
+    }
   }
 })
 
