@@ -33,6 +33,7 @@ function Start() {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
         endIcon={<ExpandMoreIcon/>}
+        sx={{ color: 'white' }}
       >
         Start
       </Button>

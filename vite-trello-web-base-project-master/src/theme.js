@@ -8,16 +8,16 @@ const theme = extendTheme({
   colorSchemes: {
     light: {
       palette: {
-        // primary: {
-        //   main: '#ff5252'
-        // }
+        primary: {
+          main: '#2980b9'
+        }
       }
     },
     dark: {
       palette: {
-        // primary: {
-        //   main: '#000'
-        // }
+        primary: {
+          main: '#2c3e50'
+        }
       }
     }
   },
@@ -34,21 +34,21 @@ const theme = extendTheme({
         }
       }
     },
-    MuiOutlinedInput: {
-      styleOverrides: {
-        root: ({ theme }) => {
-          return {
-            color: `${theme.palette.primary.main}`,
-            '& .MuiOutlinedInput-notchedOutline': {
-              borderColor: `${theme.palette.primary.main}`
-            },
-            '&:hover .MuiOutlinedInput-notchedOutline': {
-              borderColor: `${theme.palette.primary.light}`
-            }
-          }
-        }
-      }
-    },
+    // MuiOutlinedInput: {
+    //   styleOverrides: {
+    //     root: ({ theme }) => {
+    //       return {
+    //         color: `${theme.palette.primary.main}`,
+    //         '& .MuiOutlinedInput-notchedOutline': {
+    //           borderColor: `${theme.palette.primary.main}`
+    //         },
+    //         '&:hover .MuiOutlinedInput-notchedOutline': {
+    //           borderColor: `${theme.palette.primary.light}`
+    //         }
+    //       }
+    //     }
+    //   }
+    // },
     MuiInputLabel: {
       styleOverrides: {
         root: ({ theme }) => {
