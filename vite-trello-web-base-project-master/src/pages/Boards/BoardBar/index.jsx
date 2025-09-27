@@ -36,7 +36,7 @@ function BoardBar() {
       </Box>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, justifyContent: 'space-between' }}>
         <Button variant="outlined" startIcon={<PersonAddIcon/>} sx={{ color: 'white', borderColor: 'white' }}>Invite</Button>
-        <AvatarGroup max={4} sx={{ '& :first-child': { height: '30px', width: '30px' } }} >
+        <AvatarGroup max={4} sx={{ '& :first-of-type': { height: '30px', width: '30px' } }} >
           <Avatar sx={{ height: '30px', width: '30px' }} alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
           <Avatar sx={{ height: '30px', width: '30px' }} alt="Travis Howard" src="/static/images/avatar/2.jpg" />
           <Avatar sx={{ height: '30px', width: '30px' }} alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
